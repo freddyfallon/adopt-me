@@ -1,0 +1,68 @@
+{
+  "name": "adopt-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "format": "prettier \"src/**/*{js,html}\" --write",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/errors",
+      "plugin:react/recommended",
+      "plugin:jsx-a11y/recommended",
+      "prettier",
+      "prettier/react"
+    ],
+    "rules": {
+      "react/prop-types": 0,
+      "no-console": 1
+    },
+    "plugins": [
+      "react",
+      "import",
+      "jsx-a11y"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
